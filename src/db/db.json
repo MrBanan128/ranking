@@ -1,0 +1,50 @@
+{
+    "kluby":
+    [
+        {
+            "id": "1",
+            "nazwa": "LKS Kasztelan",
+            "miejsce": "Papowo Biskupie",
+            "rozgrywki": "B Klasa"
+        },
+        {
+            "id": "2",
+            "nazwa": "Legia II ",
+            "miejsce": "Chełmża",
+            "rozgrywki": "B Klasa"
+        },
+        {
+            "id": "3",
+            "nazwa": "Ogniwo",
+            "miejsce": "Zegartowice",
+            "rozgrywki": "B Klasa"
+        },
+        {
+            "id": "4",
+            "nazwa": "Sokół",
+            "miejsce": "Grzywna",
+            "rozgrywki": "B Klasa"
+        },
+        {
+            "id": "5",
+            "nazwa": "Cyklon 2",
+            "miejsce": "Kończewice",
+            "rozgrywki": "B Klasa"
+        }
+    ],
+    "uzytkownicy":
+    [
+        {
+            "id":"1",
+            "nazwa":"admin",
+            "haslo": "admin1234",
+            "email": "admin@test.pl"
+        },
+        {
+            "id":"2",
+            "nazwa":"test",
+            "haslo": "test123",
+            "email": "test@test.pl"
+        }
+    ]
+}
