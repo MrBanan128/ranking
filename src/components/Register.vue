@@ -1,8 +1,9 @@
 <template>
+  <Header />
   <img src="../components/icons/logo.png" />
   <div class="login">
-    <input type="text" password placeholder="Enter name" v-model="name" />
-    <input type="text" password placeholder="Enter email" v-model="email" />
+    <input type="text" placeholder="Enter name" v-model="name" />
+    <input type="text" placeholder="Enter email" v-model="email" />
     <input type="password" placeholder="Enter password" v-model="password" />
     <button type="button" v-on:click="register()">Register</button>
     <p><router-link to="/login">Login</router-link></p>
@@ -54,5 +55,22 @@ export default {
 img {
   width: 400px;
   float: center;
+}
+.navbar {
+  background-color: #27ad93;
+  overflow: hidden;
+}
+.navbar a {
+  float: left;
+  color: white;
+  padding: 16px 18px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: #333;
 }
 </style>

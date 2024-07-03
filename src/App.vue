@@ -46,4 +46,21 @@ a {
   font-size: 15px;
   text-decoration: none;
 }
+.nav {
+  background-color: #27ad93;
+  overflow: hidden;
+}
+.nav a {
+  float: left;
+  color: white;
+  padding: 16px 18px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: #333;
+}
 </style>

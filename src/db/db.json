@@ -35,14 +35,16 @@
     {
       "id": "1",
       "nazwa": "admin",
-      "haslo": "admin1234",
-      "email": "admin@test.pl"
+      "haslo": "admin123",
+      "email": "admin@test.pl",
+      "status": "admin"
     },
     {
       "id": "2",
       "nazwa": "test",
       "haslo": "test123",
-      "email": "test@test.pl"
+      "email": "test@test.pl",
+      "status": "uzytkownik"
     }
   ]
 }

@@ -6,14 +6,6 @@
   </div>
 </template>
 <script>
-export default {
-  name: "Header",
-  methods: {
-    logout() {
-      localStorage.clear();
-      this.$router.push("login");
-    },
-  },
-};
+export default {};
 </script>
-<style scoped></style>
+<style></style>
