@@ -14,10 +14,4 @@ export default {
 };
 </script>
 
-<style>
-img {
-  width: 400px;
-  overflow: hidden;
-  float: center;
-}
-</style>
+<style></style>

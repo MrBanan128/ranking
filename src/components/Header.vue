@@ -13,12 +13,12 @@ export default {
 </script>
 <style scoped>
 .nav {
-  background-color: #333;
+  background-color: #27ad93;
   overflow: hidden;
 }
 .nav a {
   float: left;
-  color: #f2f2f2;
+  color: white;
   padding: 16px 18px;
   text-align: center;
   font-size: 20px;

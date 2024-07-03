@@ -1,4 +1,4 @@
-<script setup></script>
+<script></script>
 
 <template>
   <RouterView />
@@ -8,5 +8,42 @@
 body {
   margin: 0;
   padding: 0;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+img {
+  width: 400px;
+}
+
+.login input {
+  border: 2px #27ad93 solid;
+  width: 300px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.login button {
+  border: none;
+  width: 320px;
+  height: 60px;
+  background-color: #27ad93;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+}
+a {
+  font-size: 15px;
+  text-decoration: none;
 }
 </style>
