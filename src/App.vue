@@ -20,7 +20,9 @@ img {
   width: 400px;
 }
 
-.login input {
+.login input,
+.update input,
+.register input {
   border: 2px #27ad93 solid;
   width: 300px;
   height: 60px;
@@ -32,7 +34,9 @@ img {
   margin-bottom: 30px;
   font-size: 20px;
 }
-.login button {
+.login button,
+.register button,
+.update button {
   border: none;
   width: 320px;
   height: 60px;

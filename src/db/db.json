@@ -25,10 +25,10 @@
       "rozgrywki": "B Klasa"
     },
     {
-      "id": "5",
-      "nazwa": "Cyklon 2",
+      "nazwa": "Cyklon II",
       "miejsce": "Kończewice",
-      "rozgrywki": "B Klasa"
+      "rozgrywki": "B Klasa",
+      "id": "5"
     }
   ],
   "uzytkownicy": [
