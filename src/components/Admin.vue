@@ -24,7 +24,7 @@
       </td>
     </tr>
   </table>
-  <button class="add-button">Add</button>
+  <button class="add-button" v-on:click="GoAdd()">Add</button>
 </template>
 <script>
 import Header from "./Header.vue";
@@ -40,6 +40,9 @@ export default {
     };
   },
   methods: {
+    GoAdd() {
+      this.$router.push("admin/add");
+    },
     logout() {
       localStorage.clear();
       this.$router.push("login");
