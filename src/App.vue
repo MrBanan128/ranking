@@ -22,6 +22,7 @@ img {
 
 .login input,
 .update input,
+.add input,
 .register input {
   border: 2px #27ad93 solid;
   width: 300px;
@@ -34,6 +35,7 @@ img {
   margin-bottom: 30px;
   font-size: 20px;
 }
+.add button,
 .login button,
 .register button,
 .update button {
