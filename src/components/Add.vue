@@ -1,7 +1,6 @@
 <template>
-  <div>Hello on Add page</div>
   <div class="add">
-    <h1>Aktualizuj dane</h1>
+    <h1>Dodaj dane</h1>
     <input
       type="text"
       name="nazwa"
@@ -20,19 +19,51 @@
       placeholder="Wpisz rozgrywki"
       v-model="kluby.rozgrywki"
     />
-    <button type="button" v-on:click="updateClub()">Update</button>
+    <button type="button" v-on:click="addClub()">Dodaj</button>
+    <button type="button" class="cofnij" v-on:click="Back()">Cofnij</button>
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   name: "Add",
   data() {
     return {
-      nazwa: "",
-      miejsce: "",
-      rozgrywki: "",
+      kluby: {
+        nazwa: "",
+        miejsce: "",
+        rozgrywki: "",
+      },
     };
   },
+  methods: {
+    async addClub() {
+      const result = await axios.post("http://localhost:3000/kluby", {
+        nazwa: this.kluby.nazwa,
+        miejsce: this.kluby.miejsce,
+        rozgrywki: this.kluby.rozgrywki,
+      });
+      if (result.status == 201) {
+        this.$router.push({ name: "admin" });
+      }
+    },
+    Back() {
+      this.$router.push({ name: "admin" });
+    },
+  },
+  // mounted() {
+  //   let user = localStorage.getItem("user-info");
+  //   if (!user) {
+  //     this.$router.push({ name: "register" });
+  //   }
+  // },
 };
 </script>
-<style></style>
+<style>
+a {
+  /* color: green; */
+}
+.cofnij {
+  margin-top: 20px;
+}
+</style>

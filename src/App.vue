@@ -47,6 +47,9 @@ img {
   margin-right: auto;
   margin-left: auto;
   cursor: pointer;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 a {
   font-size: 15px;

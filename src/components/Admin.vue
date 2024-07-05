@@ -51,7 +51,7 @@ export default {
       let result = await axios.get("http://localhost:3000/kluby/");
       this.kluby = result.data;
     },
-    async deleteClub() {
+    async deleteClub(id) {
       let result = await axios.delete("http://localhost:3000/kluby/" + id);
       console.log(result);
       if (result.status == 200) {
