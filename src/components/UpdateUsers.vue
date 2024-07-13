@@ -49,7 +49,7 @@ export default {
           status: this.users.status,
         }
       );
-      console.log(users.nazwa, users.email, users.status);
+      console.log(this.users.nazwa, this.users.email, this.users.status);
       if (result.status == 200) {
         this.$router.push({ name: "users" });
       }

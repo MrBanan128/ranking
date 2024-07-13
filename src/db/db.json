@@ -40,11 +40,10 @@
       "status": "admin"
     },
     {
-      "id": "2",
       "nazwa": "test",
-      "haslo": "test123",
-      "email": "test@test.pl",
-      "status": "uzytkownik"
+      "email": "test@gmail.com",
+      "status": "uzytkownik",
+      "id": "2"
     }
   ]
 }

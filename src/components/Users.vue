@@ -14,7 +14,7 @@
       <td>{{ user.email }}</td>
       <td>{{ user.status }}</td>
       <td>
-        <router-link :to="'/user/updateUsers/:id' + user.id" class="update"
+        <router-link :to="'/user/updateUsers/' + user.id" class="update"
           >Update</router-link
         >
       </td>
