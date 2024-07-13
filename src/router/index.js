@@ -3,6 +3,7 @@ import Home from "../components/Home.vue";
 import Admin from "../components/Admin.vue";
 import Add from "../components/Add.vue";
 import Update from "../components/Update.vue";
+import Users from "../components/Users.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,6 +37,11 @@ const router = createRouter({
       path: "/admin/update/:id",
       name: "update",
       component: Update,
+    },
+    {
+      path: "/admin/users",
+      name: "users",
+      component: Users,
     },
   ],
 });
