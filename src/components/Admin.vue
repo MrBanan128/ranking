@@ -15,7 +15,7 @@
       <td>{{ klub.miejsce }}</td>
       <td>{{ klub.rozgrywki }}</td>
       <td>
-        <router-link :to="'admin/update/' + klub.id" class="update"
+        <router-link :to="'update/' + klub.id" class="update"
           >Update</router-link
         >
       </td>
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     GoAdd() {
-      this.$router.push("admin/add");
+      this.$router.push("add");
     },
     logout() {
       localStorage.clear();

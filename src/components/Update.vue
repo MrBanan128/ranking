@@ -20,6 +20,7 @@
       v-model="kluby.rozgrywki"
     />
     <button type="button" v-on:click="updateClub()">Update</button>
+    <button type="button" class="cofnij" v-on:click="Back()">Cofnij</button>
   </div>
 </template>
 <script>
@@ -49,6 +50,9 @@ export default {
       if (result.status == 200) {
         this.$router.push({ name: "admin" });
       }
+    },
+    Back() {
+      this.$router.push({ name: "admin" });
     },
   },
 };

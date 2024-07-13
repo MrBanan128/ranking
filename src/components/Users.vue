@@ -14,9 +14,9 @@
       <td>{{ user.email }}</td>
       <td>{{ user.status }}</td>
       <td>
-        <button v-on:click="changeStatus(klub.id)" class="delete">
-          Change Status
-        </button>
+        <router-link :to="'/user/updateUsers/:id' + user.id" class="update"
+          >Update</router-link
+        >
       </td>
     </tr>
   </table>
@@ -36,10 +36,12 @@ export default {
   },
   methods: {
     async loadData() {
-      let result = await axios.get("http://localhost:3000/uzytkownicy");
+      let result = await axios.get("http://localhost:3000/uzytkownicy/");
       this.users = result.data;
     },
-    changeStatus() {},
+    async UpdateUser() {
+      this.$router.push({ name: "updateUsers" });
+    },
   },
   async mounted() {
     this.loadData();
