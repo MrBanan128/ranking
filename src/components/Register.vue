@@ -45,21 +45,21 @@ export default {
 
       let valid = true;
 
-      if (!this.name) {
-        this.nameError = "Name is required.";
+      if (!this.nazwa) {
+        this.nameError = "Nazwa jest wymagana.";
         valid = false;
       }
 
       if (!this.email) {
-        this.emailError = "Email is required.";
+        this.emailError = "Email jest wymagany.";
         valid = false;
       } else if (!this.validateEmail(this.email)) {
-        this.emailError = "Invalid email format.";
+        this.emailError = "Zły format emaila";
         valid = false;
       }
 
-      if (!this.password) {
-        this.passwordError = "Password is required.";
+      if (!this.haslo) {
+        this.passwordError = "Hasło jest wymagane.";
         valid = false;
       }
 
@@ -71,6 +71,13 @@ export default {
         return;
       }
       try {
+        let checkResult = await axios.get(
+          `http://localhost:3000/uzytkownicy?email=${this.email}`
+        );
+        if (checkResult.data.length > 0) {
+          this.emailError = "Ten email jest już zarejestrowany.";
+          return;
+        }
         let result = await axios.post("http://localhost:3000/uzytkownicy", {
           name: this.name,
           email: this.email,
@@ -81,10 +88,11 @@ export default {
           localStorage.setItem("user-info", JSON.stringify(result.data));
           this.$router.push({ name: "home" });
         } else {
-          this.errorMessage = "Registration failed. Try again.";
+          this.errorMessage = "Rejestracja nie udała się. Spróbuj ponownie.";
         }
       } catch (error) {
-        this.errorMessage = "An error occurred during registration. Try again.";
+        this.errorMessage =
+          "Podczas rejestracji wystąpił błąd. Spróbuj ponownie.";
       }
     },
     mounted() {
@@ -102,7 +110,8 @@ export default {
 <style>
 img {
   width: 400px;
-  float: center;
+  display: block;
+  margin: 0 auto;
 }
 .navbar {
   background-color: #27ad93;
