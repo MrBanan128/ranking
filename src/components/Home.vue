@@ -11,6 +11,19 @@ export default {
   components: {
     Header,
   },
+  mounted() {
+    try {
+      let user = localStorage.getItem("user-info");
+      if (user) {
+        this.userInfo = JSON.parse(user);
+      } else {
+        this.$router.push({ name: "register" });
+      }
+    } catch (error) {
+      console.error("Failed to parse user info from localstorage", error);
+      this.$router.push({ name: "register" });
+    }
+  },
 };
 </script>
 

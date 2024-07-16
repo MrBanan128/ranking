@@ -3,7 +3,9 @@
   <img src="../components/icons/logo.png" />
   <div class="login">
     <input type="text" placeholder="Enter email" v-model="email" />
+    <p></p>
     <input type="password" placeholder="Enter password" v-model="password" />
+    <p></p>
     <button type="button" v-on:click="login()">Login</button>
     <p>
       <a href="/Register">Register</a>
@@ -36,6 +38,7 @@ export default {
         } else {
           this.$router.push({ name: "home" });
         }
+      } else {
       }
       console.log(result);
     },
