@@ -40,10 +40,25 @@
       "status": "admin"
     },
     {
+      "id": "2",
       "nazwa": "test",
+      "haslo": "test123",
       "email": "test@gmail.com",
-      "status": "uzytkownik",
-      "id": "2"
+      "status": "uzytkownik"
+    },
+    {
+      "id": "682b",
+      "nazwa": "Szymon",
+      "email": "szymon@gmail.com",
+      "haslo": "1234567",
+      "status": "uzytkownik"
+    },
+    {
+      "id": "70f7",
+      "nazwa": "olek",
+      "email": "dawdawdasd@2.pl",
+      "haslo": "asdaddawd",
+      "status": "uzytkownik"
     }
   ]
 }
