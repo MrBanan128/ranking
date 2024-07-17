@@ -6,17 +6,23 @@
       <td>NAZWA</td>
       <td>EMAIL</td>
       <td>STATUS</td>
+      <td>HASŁO</td>
       <td>EDYTUJ UPRAWNIENIA</td>
+      <td>USUŃ</td>
     </tr>
     <tr v-for="user in users" :key="users.id">
       <td>{{ user.id }}</td>
       <td>{{ user.nazwa }}</td>
       <td>{{ user.email }}</td>
       <td>{{ user.status }}</td>
+      <td>{{ user.haslo }}</td>
       <td>
         <router-link :to="'/user/updateUsers/' + user.id" class="update"
           >Update</router-link
         >
+      </td>
+      <td>
+        <button v-on:click="deleteClub(user.id)" class="delete">Delete</button>
       </td>
     </tr>
   </table>
@@ -41,6 +47,15 @@ export default {
     },
     async UpdateUser() {
       this.$router.push({ name: "updateUsers" });
+    },
+    async deleteClub(id) {
+      let result = await axios.delete(
+        "http://localhost:3000/uzytkownicy/" + id
+      );
+      console.log(result);
+      if (result.status == 200) {
+        this.loadData();
+      }
     },
   },
   async mounted() {

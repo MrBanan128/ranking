@@ -52,10 +52,6 @@
       "email": "szymon@gmail.com",
       "haslo": "1234567",
       "status": "uzytkownik"
-    },
-    {
-      "id": "5bf2",
-      "email": "test@gmail.pl"
     }
   ]
 }
