@@ -66,7 +66,7 @@ export default {
         if (result.status == 200 && result.data.length > 0) {
           const user = result.data[0];
           console.log(
-            "User found: " + user.nazwa,
+            "Użytkownik znaleziony: " + user.nazwa,
             user.haslo,
             user.email,
             user.status
@@ -76,23 +76,20 @@ export default {
             localStorage.setItem("user-info", JSON.stringify(user));
 
             if (user.status == "admin") {
-              console.log("Zalogowano jako admin");
+              // console.log("Zalogowano jako admin");
               this.$router.push({ name: "admin" });
             } else if (user.status == "uzytkownik") {
-              console.log("Zalogowano jako uzytkownik");
+              // console.log("Zalogowano jako uzytkownik");
               this.$router.push({ name: "home" });
             } else {
               this.errorMessage =
                 "Niepoprawne dane logowania. Spróbuj ponownie.";
-              console.log("Nie wyswietla uzytkownika1");
             }
           } else {
-            console.log("Nie wyswietla uzytkownika2");
             this.errorMessage = "Niepoprawne dane logowania. Spróbuj ponownie.";
           }
         } else {
           this.errorMessage = "Niepoprawne dane logowania. Spróbuj ponownie.";
-          console.log("Nie wyswietla uzytkownika3");
         }
       } catch {
         this.errorMessage =
