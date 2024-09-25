@@ -1,32 +1,34 @@
 <template>
-  <Header />
-  <img src="../components/icons/logo.png" />
+  <div class="container">
+    <Header />
+    <img src="../components/icons/B_klasa.png" />
+    <Footer />
+  </div>
 </template>
+
 <script>
 import Header from "./Header.vue";
+import Footer from "./Footer.vue";
 
 export default {
   name: "HomePage",
-  data() {
-    return {};
-  },
   components: {
     Header,
-  },
-  mounted() {
-    try {
-      let user = localStorage.getItem("user-info");
-      if (user) {
-        this.userInfo = JSON.parse(user);
-      } else {
-        this.$router.push({ name: "register" });
-      }
-    } catch (error) {
-      console.error("Failed to parse user info from localstorage", error);
-      this.$router.push({ name: "register" });
-    }
+    Footer,
   },
 };
 </script>
 
-<style></style>
+<style>
+html, body {
+  height: 100%; /* Ustalamy wysokość dla html i body */
+  margin: 0; /* Usuwamy domyślne marginesy */
+}
+
+.container {
+  display: flex; /* Używamy flexbox */
+  flex-direction: column; /* Ustawiamy kierunek kolumnowy */
+  justify-content: space-between; /* Ustawiamy przestrzeń między elementami */
+  min-height: 100vh; /* Ustalamy minimalną wysokość na 100% wysokości okna */
+}
+</style>

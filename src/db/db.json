@@ -47,10 +47,17 @@
       "status": "uzytkownik"
     },
     {
-      "id": "682b",
+      "id": "3",
       "nazwa": "Szymon",
       "email": "szymon@gmail.com",
       "haslo": "1234567",
+      "status": "uzytkownik"
+    },
+    {
+      "id": 4,
+      "nazwa": "tst412",
+      "email": "231D@da.pdas",
+      "haslo": "dawwda",
       "status": "uzytkownik"
     }
   ]
