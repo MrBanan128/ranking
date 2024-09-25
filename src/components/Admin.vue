@@ -64,7 +64,11 @@ export default {
    * zmienić w headerze z admin na druzyny
    * wymyśleć co admin mógłby mieć
    * segregacja rozgrywek
+<<<<<<< HEAD
    * zrobić footer
+=======
+   * 
+>>>>>>> b0ae4a7a3035519d5edd541d0dfc7aa3cdaf0114
    * 
    */
 

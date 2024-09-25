@@ -1,9 +1,14 @@
 <template>
+<<<<<<< HEAD
   <div class="container">
     <Header />
     <img src="../components/icons/B_klasa.png" />
     <Footer />
   </div>
+=======
+  <Header />
+  <img src="../components/icons/B_klasa.png" />
+>>>>>>> b0ae4a7a3035519d5edd541d0dfc7aa3cdaf0114
 </template>
 
 <script>
@@ -14,7 +19,13 @@ export default {
   name: "HomePage",
   components: {
     Header,
+<<<<<<< HEAD
     Footer,
+=======
+  },
+  mounted() {
+    
+>>>>>>> b0ae4a7a3035519d5edd541d0dfc7aa3cdaf0114
   },
 };
 </script>
