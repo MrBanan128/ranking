@@ -1,12 +1,22 @@
 <template>
   <div class="nav">
+    <!-- Wyświetla się zawsze -->
     <router-link to="/">Home</router-link>
+
+    <!-- Wyświetla się tylko gdy użytkownik NIE jest zalogowany -->
     <router-link v-if="!czyZalogowany" to="/login">Login</router-link>
-    <router-link v-if="czyAdmin" to="/admin">Admin</router-link>
-    <router-link v-if="czyZalogowany" to="/users">Uzytkownicy</router-link>
+    
+    <!-- Wyświetla się tylko gdy użytkownik jest zalogowany i jest adminem -->
+    <router-link v-if="czyZalogowany && czyAdmin" to="/admin">Admin</router-link>
+
+    <!-- Wyświetla się tylko gdy użytkownik jest zalogowany i jest adminem -->
+    <router-link v-if="czyZalogowany && czyAdmin" to="/users">Użytkownicy</router-link>
+
+    <!-- Wyświetla się tylko gdy użytkownik jest zalogowany (admin lub zwykły użytkownik) -->
     <a v-if="czyZalogowany" href="#" v-on:click="logout()">Logout</a>
   </div>
 </template>
+
 <script>
 export default {
   name: "Header",
@@ -18,11 +28,14 @@ export default {
   },
   methods: {
     checkLoginStatus() {
+      // Sprawdza czy użytkownik jest zalogowany
       let user = localStorage.getItem("user-info");
       if (user) {
         user = JSON.parse(user);
         this.czyZalogowany = true;
-        this.czyAdmin = user.status === "admin";
+
+        // Sprawdza, czy użytkownik jest adminem
+        this.czyAdmin = user.status === "admin"; 
       } else {
         this.czyZalogowany = false;
         this.czyAdmin = false;
@@ -30,9 +43,9 @@ export default {
     },
     logout() {
       localStorage.clear();
-      this.isLoggedIn = false;
-      this.isAdmin = false;
-      this.$router.push("login");
+      this.czyZalogowany = false;
+      this.czyAdmin = false;
+      this.$router.push("/login");
     },
   },
   mounted() {
@@ -45,6 +58,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .nav {
   display: flex;

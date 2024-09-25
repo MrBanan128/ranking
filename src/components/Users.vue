@@ -63,8 +63,16 @@ export default {
     try {
       let user = localStorage.getItem("user-info");
       if (user) {
-        this.userInfo = JSON.parse(user);
-      } else {
+        let parsedUser = JSON.parse(user);
+        this.userInfo = parsedUser;
+        if (parsedUser.status === "admin") {
+          this.isAdmin = true;
+        } else {
+          // Przekierowanie, jeśli użytkownik nie jest adminem
+          this.$router.push({name: "home"});
+        }
+      }
+      else {
         this.$router.push({ name: "register" });
       }
     } catch (error) {

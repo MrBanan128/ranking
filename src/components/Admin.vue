@@ -59,6 +59,16 @@ export default {
       }
     },
   },
+  /** TODO
+   * dodać druzyny
+   * zmienić w headerze z admin na druzyny
+   * wymyśleć co admin mógłby mieć
+   * segregacja rozgrywek
+   * 
+   * 
+   */
+
+
   async mounted() {
     this.loadData();
     try {
