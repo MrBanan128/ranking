@@ -64,4 +64,12 @@ export default {
   display: flex;
   gap: 10px;
 }
+.nav {
+  display: flex;
+  justify-content: center; /* Wycentrowanie linków w Headerze */
+  gap: 10px; /* Odstępy między linkami */
+  margin: 0;
+  padding: 0;
+}
+
 </style>
