@@ -73,6 +73,32 @@
 }
 .sections a:hover {
   text-decoration: underline; /* Podkreślenie linku na hover */
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left; /* Ustawia wyrównanie tekstu do lewej */
+  margin: 20px; /* Opcjonalnie możesz dodać margines, aby dodać przestrzeni wokół sekcji */
+  padding-left: 50px;
+}
+.sections h4 {
+  margin-bottom: 10px; /* Odstęp pod nagłówkiem */
+}
+.sections a {
+  display: block; /* Każdy link w nowej linii */
+  margin: 5px 0; /* Odstępy między linkami */
+  text-decoration: none; /* Usuń podkreślenie */
+  color: #007bff; /* Ustaw kolor linków */
+}
+.sections a:hover {
+  text-decoration: underline; /* Podkreślenie linku na hover */
+}
+.contact h4 {
+  margin-bottom: 10px; /* Dodaj odstęp pod nagłówkiem */
+}
+.contact p {
+  margin: 5px 0; /* Ustaw odstępy nad i pod paragrafami */
 }
 .social-links {
   display: flex; /* Używamy flexboxa do wyświetlania linków */

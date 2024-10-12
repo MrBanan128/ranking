@@ -27,7 +27,7 @@
             <img src="/src/components/icons/medium-shot-kids-laying-grass.jpg" alt="">
           </div>
         </div>
-      </div>
+    </div>
   </div>
     <Footer />
   </div>

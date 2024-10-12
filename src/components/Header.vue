@@ -73,4 +73,13 @@ export default {
   padding: 0;
 }
 
+.nav {
+  display: flex;
+  justify-content: center; /* Wycentrowanie linków w Headerze */
+  gap: 10px; /* Odstępy między linkami */
+  margin: 0;
+  padding: 0;
+}
+
+
 </style>
