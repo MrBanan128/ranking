@@ -5,6 +5,7 @@ import Add from "../components/Add.vue";
 import Update from "../components/Update.vue";
 import Users from "../components/Users.vue";
 import UpdateUsers from "../components/UpdateUsers.vue";
+import Rozgrywki from "@/components/Rozgrywki.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,6 +49,11 @@ const router = createRouter({
       path: "/user/updateUsers/:id",
       name: "updateUsers",
       component: UpdateUsers,
+    },
+    {
+      path: "/rozgrywki",
+      name: "rozgrywki",
+      component: Rozgrywki,
     },
   ],
 });

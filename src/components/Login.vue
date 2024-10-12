@@ -113,7 +113,7 @@ export default {
 </script>
 
 <style>
-p {
+.login p {
   color: red;
   font-size: 12px;
 }

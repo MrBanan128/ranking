@@ -1,29 +1,32 @@
 <template>
   <Header />
-  <table>
-    <tr>
-      <td>ID</td>
-      <td>Name</td>
-      <td>Location</td>
-      <td>League</td>
-      <td>Update</td>
-      <td>Delete</td>
-    </tr>
-    <tr v-for="klub in kluby" :key="klub.id">
-      <td>{{ klub.id }}</td>
-      <td>{{ klub.nazwa }}</td>
-      <td>{{ klub.miejsce }}</td>
-      <td>{{ klub.rozgrywki }}</td>
-      <td>
-        <router-link :to="'update/' + klub.id" class="update"
+  <div class="admin">
+
+    <table>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Location</td>
+        <td>League</td>
+        <td>Update</td>
+        <td>Delete</td>
+      </tr>
+      <tr v-for="klub in kluby" :key="klub.id">
+        <td>{{ klub.id }}</td>
+        <td>{{ klub.nazwa }}</td>
+        <td>{{ klub.miejsce }}</td>
+        <td>{{ klub.rozgrywki }}</td>
+        <td>
+          <router-link :to="'update/' + klub.id" class="update"
           >Update</router-link
-        >
-      </td>
-      <td>
-        <button v-on:click="deleteClub(klub.id)" class="delete">Delete</button>
-      </td>
-    </tr>
-  </table>
+          >
+        </td>
+        <td>
+          <button v-on:click="deleteClub(klub.id)" class="delete">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
   <button class="add-button" v-on:click="GoAdd()">Add</button>
 </template>
 <script>
@@ -64,12 +67,8 @@ export default {
    * zmienić w headerze z admin na druzyny
    * wymyśleć co admin mógłby mieć
    * segregacja rozgrywek
-<<<<<<< HEAD
-   * zrobić footer
-=======
-   * 
->>>>>>> b0ae4a7a3035519d5edd541d0dfc7aa3cdaf0114
-   * 
+   * newsletter
+   * sponsorzy
    */
 
 
@@ -93,7 +92,7 @@ export default {
 };
 </script>
 <style>
-td {
+.admin td {
   width: 160px;
   height: 40px;
 }
@@ -108,7 +107,7 @@ td {
   margin-top: 20px;
   color: white;
 }
-table {
+.admin table {
   border: rgb(4, 4, 63) 3px solid;
   display: block;
   background-color: #27ad93;

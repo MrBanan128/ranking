@@ -4,7 +4,15 @@
       "id": "1",
       "nazwa": "LKS Kasztelan",
       "miejsce": "Papowo Biskupie",
-      "rozgrywki": "B Klasa"
+      "rozgrywki": "B Klasa",
+      "mecze": "11",
+      "punkty": "25",
+      "wygrane": "8",
+      "remisy": "1",
+      "porażki": "2",
+      "bramki_strzelone": "21",
+      "bramki_stracone": "7",
+      "bilans": "14"
     },
     {
       "id": "2",

@@ -157,7 +157,7 @@ img {
   background-color: #ddd; 
   color: #333; 
 }
-p {
+.register p {
   color: red; 
   font-size: 18px; 
 }
